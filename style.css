@@ -6,11 +6,72 @@ body {
     line-height: 1.5;
     color: #495057;
     text-align: left;
-    background-color: #eef1f3
+    background-color: #f5f5f5;
 }
 
+#qna-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+#qnasidebar{
+    max-height: 720px;
+    overflow-y: scroll; 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollableContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#qnasidebar::-webkit-scrollbar {
+    display: none;
+}
+
+#discussPanel{
+    max-height: 600px;
+}
+
+.scrollableContainer{
+    height: 70vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.banner{
+    background: #fff;
+    box-shadow: 5px 5px 20px #aaa;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+
+.banner-title{
+    vertical-align: middle;
+}
+
+.banner-title h3{
+    line-height: 1.4em;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: purple;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+.mt-50{
+    margin-top: 50px;
+}
 .mt-100 {
     margin-top: 100px
+}
+.card-rounded{
+    border-radius: 8px;
 }
 
 .card {
@@ -67,5 +128,72 @@ a {
 
 .media img {
     width: 40px;
-    height: auto
+    height: auto;
+}
+
+@media screen and (max-width: 920px){
+    #qna-wrapper{
+        flex-direction: column-reverse;
+    }
+}
+
+.activetab{
+    background: #dddddd;
+    height: inherit;
+    width: max-content;
+}
+
+#tabs{
+    margin: 20px 0px;
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #e2e2e2;
+    color: #222;
+    border-radius: 3px;
+}
+#tabs .tab{
+    display: inline-block;
+    width: 33%;
+    padding: 10px;
+    border-radius: 2px;
+    text-align: center;
+}
+.tab.active{
+    background: rgb(255, 166, 0);
+    color: #000;
+    font-weight: 700;
+    box-shadow: 1px 1px 5px #aaa;
+}
+#upcoming.active{
+    background: rgb(255, 166, 0);
+    color: #000;
+    font-weight: 700;
+    box-shadow: 1px 1px 5px #aaa;
+}
+#closed.active{
+    background: rgb(255, 166, 0);
+    color: #000;
+    font-weight: 700;
+    box-shadow: 1px 1px 5px #aaa;
+}
+
+
+@media screen and (max-width: 720px){
+    .checks{
+        display: none;
+        visibility: hidden;
+    }
+    .categories{
+        display: none;
+        visibility: hidden;
+    }
+    .banner h3{
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+    .banner 
+
 }
