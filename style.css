@@ -50,6 +50,10 @@ body {
     padding: 10px 0px;
 }
 
+.bnrhead{
+    width: 80%;
+}
+
 .banner-title{
     vertical-align: middle;
 }
@@ -91,10 +95,11 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     padding-right: .625rem;
-    height: 3.5rem;
+    height: max-content;
     text-transform: uppercase;
     background-color: #fff;
-    border-bottom: 1px solid rgba(26, 54, 126, 0.125)
+    border-bottom: 1px solid rgba(26, 54, 126, 0.125);
+    padding: 20px 30px;
 }
 
 .btn-primary {
@@ -131,7 +136,7 @@ a {
     height: auto;
 }
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 990px){
     #qna-wrapper{
         flex-direction: column-reverse;
     }
@@ -145,8 +150,8 @@ a {
 
 #tabs{
     margin: 20px 0px;
-    margin-left: 5%;
-    width: 90%;
+    margin-left: 2%;
+    width: 96%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -181,7 +186,7 @@ a {
 }
 
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 990px){
     .checks{
         display: none;
         visibility: hidden;
@@ -194,6 +199,14 @@ a {
         font-size: 1em;
         line-height: 1.2em;
     }
-    .banner 
+    .banner .arrowicon svg{
+        width: 22px;
+    }
 
+}
+
+@media screen and (max-width: 425px) {
+    #tabs .tab{
+        font-size: 0.8em;
+    }
 }
