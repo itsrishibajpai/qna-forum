@@ -296,83 +296,8 @@ a {
 }
 
 #floatingbtns{
-    position: fixed;
-    right: 40px;
-    bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-#floatingbtns button{
-    padding: 13px 15px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px #bbb;
-    outline: none;
-    border: none;
-    font-size: 1.4em;
-}
-#sortbtn{
-    background: rgb(216, 191, 145);
-    color: #111;
-}
-#sortbtn:hover{
-    background: rgb(228, 148, 0);
-    color: #111;
-    box-shadow: 0px 0px 10px #999;
-    transition: 0.5s ease;
-}
-#filterbtn{
-    background: #111;
-    color: rgb(228, 148, 0);
-    margin-top: 20px;
-}
-#filterbtn:hover{
-    background: rgb(228, 148, 0);
-    color: #111;
-    box-shadow: 0px 0px 10px #999;
-    transition: 0.5s ease;
-}
-.modal-content{
-    width: 300px;
-    padding: 0px 20px;
-    margin: 50px auto;
-}
-h4.modal-title{
-    font-size: 1.3em;
-}
-.close{
-    margin: 50px;
-    color: rgb(255, 120, 42);
-}
-.close:focus{
-    color: red;
-    outline: none;
-}
-.close:hover{
-    color: red;
-    outline: none;
-}
-.sortbutton{
-    display: block;
-    background: none;
-    outline: none;
-    border: none;
-    padding: 10px 0px;
-    color: #222;
-    font-size: 1em;
-}
-.sortbutton:hover{
-    outline: none;
-    color: rgb(255, 153, 0);
-    transition: 0.3s ease;
-}
-.sortbutton:focus{
-    outline: none;
-    color: #07830b;
-}
-.sortbutton::clicked{
-    outline: none;
-    color: #4eb852;
+    display: none;
+    visibility: hidden;
 }
 
 
@@ -417,6 +342,85 @@ h4.modal-title{
     .panel p{
         font-size: 0.8em;
         margin-bottom: 5px;
+    }
+    #floatingbtns{
+        position: fixed;
+        right: 40px;
+        bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #floatingbtns button{
+        padding: 13px 15px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px #bbb;
+        outline: none;
+        border: none;
+        font-size: 1.4em;
+    }
+    #sortbtn{
+        background: rgb(216, 191, 145);
+        color: #111;
+    }
+    #sortbtn:hover{
+        background: rgb(228, 148, 0);
+        color: #111;
+        box-shadow: 0px 0px 10px #999;
+        transition: 0.5s ease;
+    }
+    #filterbtn{
+        background: #111;
+        color: rgb(228, 148, 0);
+        margin-top: 20px;
+    }
+    #filterbtn:hover{
+        background: rgb(228, 148, 0);
+        color: #111;
+        box-shadow: 0px 0px 10px #999;
+        transition: 0.5s ease;
+    }    
+    .modal-content{
+        width: 300px;
+        padding: 0px 20px;
+        margin: 50px auto;
+    }
+    h4.modal-title{
+        font-size: 1.3em;
+    }
+    .close{
+        margin: 50px;
+        color: rgb(255, 120, 42);
+    }
+    .close:focus{
+        color: red;
+        outline: none;
+    }
+    .close:hover{
+        color: red;
+        outline: none;
+    }
+    .sortbutton{
+        display: block;
+        background: none;
+        outline: none;
+        border: none;
+        padding: 10px 0px;
+        color: #222;
+        font-size: 1em;
+    }
+    .sortbutton:hover{
+        outline: none;
+        color: rgb(255, 153, 0);
+        transition: 0.3s ease;
+    }
+    .sortbutton:focus{
+        outline: none;
+        color: #07830b;
+    }
+    .sortbutton::clicked{
+        outline: none;
+        color: #4eb852;
     }
 }
 
