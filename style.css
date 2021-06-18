@@ -16,9 +16,13 @@ body {
     padding: 20px 40px;
 }
 
+#x{
+    margin-top: 20px;
+}
+
 #qnasidebar{
     max-height: 720px;
-    overflow-y: scroll; 
+    overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -37,7 +41,7 @@ body {
 }
 
 .scrollableContainer{
-    height: 70vh;
+    height: 60vh;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -48,6 +52,14 @@ body {
     box-shadow: 5px 5px 20px #aaa;
     border-radius: 10px;
     padding: 10px 0px;
+}
+
+.banner .arrowicon svg{
+    filter: grayscale(1);
+}
+
+.banner .arrowicon svg:hover{
+    filter: none;
 }
 
 .bnrhead{
@@ -62,7 +74,7 @@ body {
     line-height: 1.4em;
     font-size: 1.6em;
     font-weight: 700;
-    color: purple;
+    color: rgb(255, 166, 0);
 }
 
 .mt-20{
@@ -79,7 +91,6 @@ body {
 }
 
 .card {
-    box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
     border-width: 0;
     transition: all .2s
 }
@@ -98,8 +109,12 @@ body {
     height: max-content;
     text-transform: uppercase;
     background-color: #fff;
+    border: 1px solid #eee;
     border-bottom: 1px solid rgba(26, 54, 126, 0.125);
     padding: 20px 30px;
+}
+.card-footer{
+    background: #fff;
 }
 
 .btn-primary {
@@ -126,7 +141,7 @@ body {
 }
 
 a {
-    color: #E91E63;
+    color: rgb(228, 148, 0);
     text-decoration: none !important;
     background-color: transparent
 }
@@ -187,7 +202,187 @@ a {
     padding: 0;
 }
 
+
+@media screen and (max-width: 425px) {
+    #tabs .tab{
+        font-size: 0.8em;
+    }
+}
+
+
+.search
+{
+	border: 2px solid rgb(255, 203, 106);
+	overflow: auto;
+	border-radius: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.search-form{
+    margin-bottom: 0;
+    background: #fff;
+}
+
+.search input[type="text"]
+{
+	border: 0px;
+	width: 67%;
+	padding: 10px;
+}
+
+.search input[type="text"]:focus
+{
+	outline: 0;
+}
+
+.search input[type="submit"]
+{
+	border: 0px;
+	background: none;
+	background-color: rgb(255, 166, 0);
+	color: #000;
+    font-weight: 700;
+	float: right;
+	padding: 10px 15px;
+	border-radius: 2px;
+        cursor:pointer;
+}
+.search input[type="submit"]:hover{
+    opacity: 0.9;
+    box-shadow: 5px 5px 15px #444;
+    transition: 0.5s ease;
+}
+
+/* ===========================
+   ====== Medua Query for Search Box ======
+   =========================== */
+
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+
+	.search
+	{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+}
+
+.horizontalscroll{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    box-shadow: inset 0px 0px 40px #ccc;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.panel{
+    min-width: 250px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.panel h4{
+    margin-top: 10px;
+}
+
+#floatingbtns{
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#floatingbtns button{
+    padding: 13px 15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #bbb;
+    outline: none;
+    border: none;
+    font-size: 1.4em;
+}
+#sortbtn{
+    background: rgb(216, 191, 145);
+    color: #111;
+}
+#sortbtn:hover{
+    background: rgb(228, 148, 0);
+    color: #111;
+    box-shadow: 0px 0px 10px #999;
+    transition: 0.5s ease;
+}
+#filterbtn{
+    background: #111;
+    color: rgb(228, 148, 0);
+    margin-top: 20px;
+}
+#filterbtn:hover{
+    background: rgb(228, 148, 0);
+    color: #111;
+    box-shadow: 0px 0px 10px #999;
+    transition: 0.5s ease;
+}
+.modal-content{
+    width: 300px;
+    padding: 0px 20px;
+    margin: 50px auto;
+}
+h4.modal-title{
+    font-size: 1.3em;
+}
+.close{
+    margin: 50px;
+    color: rgb(255, 120, 42);
+}
+.close:focus{
+    color: red;
+    outline: none;
+}
+.close:hover{
+    color: red;
+    outline: none;
+}
+.sortbutton{
+    display: block;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 10px 0px;
+    color: #222;
+    font-size: 1em;
+}
+.sortbutton:hover{
+    outline: none;
+    color: rgb(255, 153, 0);
+    transition: 0.3s ease;
+}
+.sortbutton:focus{
+    outline: none;
+    color: #07830b;
+}
+.sortbutton::clicked{
+    outline: none;
+    color: #4eb852;
+}
+
+
 @media screen and (max-width: 990px){
+    #qna-wrapper{
+        padding: 20px;
+    }
+    #qnasection{
+        margin-top: 5px;
+    }
     .checks{
         display: none;
         visibility: hidden;
@@ -203,11 +398,50 @@ a {
     .banner .arrowicon svg{
         width: 22px;
     }
-
+    #tabs{
+        margin: 20px 0px;
+    }
+    .banner{
+        padding: 0px;
+    }
+    .panel{
+        padding: 5px 10px;
+        min-width: 160px;
+        margin-right: 10px;
+    }
+    .panel h4{
+        margin-top: 5px;
+        font-size: 1em;
+        font-weight: 700;
+    }
+    .panel p{
+        font-size: 0.8em;
+        margin-bottom: 5px;
+    }
 }
 
-@media screen and (max-width: 425px) {
-    #tabs .tab{
-        font-size: 0.8em;
+@media screen and (max-width: 325px){
+    #qna-wrapper{
+        padding: 20px 10px;
+    }
+    .modal-content{
+        width: 250px;
+        padding: 0px 15px;
+    }
+    .sortbutton{
+        font-size: 0.9em;
+        padding: 5px 0px;
+    }
+    .search input[type="submit"] {
+        padding: 10px 12px;
+    }
+    .card-body h2{
+        font-size: 1.4em;
+    }
+    .card-header{
+        padding: 10px;
+    }
+    .card-footer{
+        background: #fff;
     }
 }

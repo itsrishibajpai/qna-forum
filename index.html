@@ -11,33 +11,93 @@
 <body>
 
     <div id="qna-wrapper" class="row">
-        <div id="qnasection" class="col-xs-12 col-sm-12 col-lg-9 mt-50">
-            
-            <!-- banner section -->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 no-pad">
-                        <div class="card mb-4 banner">
-                            <div class="d-flex justify-content-between align-items-center px-0 pt-0 pb-3">
-                                <div class="px-4 pt-3 bnrhead">
-                                    <h3> Ask your Question or discuss a topic </h3>
-                                </div>
-                                <div class="px-4 pt-3 bnrimg"> 
-                                    <a href="#" class="arrowicon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                            width="50" height="50"
-                                            viewBox="0 0 172 172"
-                                            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e67e22"><path d="M86,6.88c-43.65844,0 -79.12,35.46156 -79.12,79.12c0,43.65844 35.46156,79.12 79.12,79.12c43.65844,0 79.12,-35.46156 79.12,-79.12c0,-43.65844 -35.46156,-79.12 -79.12,-79.12zM86,13.76c39.93625,0 72.24,32.30375 72.24,72.24c0,39.93625 -32.30375,72.24 -72.24,72.24c-39.93625,0 -72.24,-32.30375 -72.24,-72.24c0,-39.93625 32.30375,-72.24 72.24,-72.24zM99.4375,54.9325c-0.14781,0.02688 -0.29562,0.06719 -0.43,0.1075c-1.29,0.22844 -2.32469,1.16906 -2.6875,2.41875c-0.36281,1.26313 0.01344,2.60688 0.9675,3.49375l21.6075,21.6075h-74.175c-0.1075,0 -0.215,0 -0.3225,0c-1.89469,0.09406 -3.37281,1.70656 -3.27875,3.60125c0.09406,1.89469 1.70656,3.37281 3.60125,3.27875h74.175l-21.6075,21.6075c-1.37062,1.37063 -1.37062,3.57438 0,4.945c1.37063,1.37063 3.57438,1.37063 4.945,0l26.9825,-27.09c0.18813,-0.12094 0.37625,-0.26875 0.5375,-0.43c0.08063,-0.1075 0.14781,-0.215 0.215,-0.3225c0.08063,-0.06719 0.14781,-0.13437 0.215,-0.215c0.13438,-0.20156 0.24188,-0.41656 0.3225,-0.645c0.04031,-0.06719 0.08063,-0.14781 0.1075,-0.215c0,-0.04031 0,-0.06719 0,-0.1075c0.04031,-0.1075 0.08063,-0.215 0.1075,-0.3225c0.05375,-0.36281 0.05375,-0.71219 0,-1.075c0,-0.06719 0,-0.14781 0,-0.215c0,-0.04031 0,-0.06719 0,-0.1075c-0.02687,-0.06719 -0.06719,-0.14781 -0.1075,-0.215c0,-0.04031 0,-0.06719 0,-0.1075c-0.02687,-0.06719 -0.06719,-0.14781 -0.1075,-0.215c0,-0.04031 0,-0.06719 0,-0.1075c-0.02687,-0.06719 -0.06719,-0.14781 -0.1075,-0.215c-0.04031,-0.04031 -0.06719,-0.06719 -0.1075,-0.1075c-0.02687,-0.06719 -0.06719,-0.14781 -0.1075,-0.215c-0.12094,-0.18812 -0.26875,-0.37625 -0.43,-0.5375h-0.1075c-0.06719,-0.08062 -0.13437,-0.14781 -0.215,-0.215l-27.1975,-27.305c-0.71219,-0.76594 -1.74687,-1.15562 -2.795,-1.075z"></path></g></g></svg>
-                                    </a> 
+
+        <!-- main qna section -->
+        <div id="qnasection" class="col-xs-12 col-sm-12 col-lg-9">
+
+            <!-- qna section -->
+            <div id="discussPanel">
+
+                <!-- banner section -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 no-pad">
+                            <div class="card mb-4 banner">
+                                <div class="d-flex justify-content-between align-items-center px-0 pt-0 pb-3">
+                                    <div class="px-4 pt-3 bnrhead">
+                                        <h3> Ask your Question or discuss a topic </h3>
+                                    </div>
+                                    <div class="px-4 pt-3 bnrimg">
+                                        <a href="#" class="arrowicon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                width="50" height="50"
+                                                viewBox="0 0 172 172"
+                                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e67e22"><path d="M86,6.88c-43.65844,0 -79.12,35.46156 -79.12,79.12c0,43.65844 35.46156,79.12 79.12,79.12c43.65844,0 79.12,-35.46156 79.12,-79.12c0,-43.65844 -35.46156,-79.12 -79.12,-79.12zM86,13.76c39.93625,0 72.24,32.30375 72.24,72.24c0,39.93625 -32.30375,72.24 -72.24,72.24c-39.93625,0 -72.24,-32.30375 -72.24,-72.24c0,-39.93625 32.30375,-72.24 72.24,-72.24zM99.4375,54.9325c-0.14781,0.02688 -0.29562,0.06719 -0.43,0.1075c-1.29,0.22844 -2.32469,1.16906 -2.6875,2.41875c-0.36281,1.26313 0.01344,2.60688 0.9675,3.49375l21.6075,21.6075h-74.175c-0.1075,0 -0.215,0 -0.3225,0c-1.89469,0.09406 -3.37281,1.70656 -3.27875,3.60125c0.09406,1.89469 1.70656,3.37281 3.60125,3.27875h74.175l-21.6075,21.6075c-1.37062,1.37063 -1.37062,3.57438 0,4.945c1.37063,1.37063 3.57438,1.37063 4.945,0l26.9825,-27.09c0.18813,-0.12094 0.37625,-0.26875 0.5375,-0.43c0.08063,-0.1075 0.14781,-0.215 0.215,-0.3225c0.08063,-0.06719 0.14781,-0.13437 0.215,-0.215c0.13438,-0.20156 0.24188,-0.41656 0.3225,-0.645c0.04031,-0.06719 0.08063,-0.14781 0.1075,-0.215c0,-0.04031 0,-0.06719 0,-0.1075c0.04031,-0.1075 0.08063,-0.215 0.1075,-0.3225c0.05375,-0.36281 0.05375,-0.71219 0,-1.075c0,-0.06719 0,-0.14781 0,-0.215c0,-0.04031 0,-0.06719 0,-0.1075c-0.02687,-0.06719 -0.06719,-0.14781 -0.1075,-0.215c0,-0.04031 0,-0.06719 0,-0.1075c-0.02687,-0.06719 -0.06719,-0.14781 -0.1075,-0.215c0,-0.04031 0,-0.06719 0,-0.1075c-0.02687,-0.06719 -0.06719,-0.14781 -0.1075,-0.215c-0.04031,-0.04031 -0.06719,-0.06719 -0.1075,-0.1075c-0.02687,-0.06719 -0.06719,-0.14781 -0.1075,-0.215c-0.12094,-0.18812 -0.26875,-0.37625 -0.43,-0.5375h-0.1075c-0.06719,-0.08062 -0.13437,-0.14781 -0.215,-0.215l-27.1975,-27.305c-0.71219,-0.76594 -1.74687,-1.15562 -2.795,-1.075z"></path></g></g>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- qna section -->
-            <div id="discussPanel">
+                <!-- horizontal scrollable area -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 no-pad horizontalscroll" >
+
+                            <!-- panels -->
+                            <div class="panel" style="background: #E6B89C; color: #000;">
+                                <h4 class="panel-title">Subject</h4>
+                                <p class="panel-desc">
+                                    3-4 words about the subject
+                                </p>
+                            </div>
+
+                            <!-- panels -->
+                            <div class="panel" style="background: #AA7DCE; color: #000;">
+                                <h4 class="panel-title">Subject</h4>
+                                <p class="panel-desc">
+                                    3-4 words about the subject
+                                </p>
+                            </div>
+
+                            <!-- panels -->
+                            <div class="panel" style="background: #BEB7A4; color: #000;">
+                                <h4 class="panel-title">Subject</h4>
+                                <p class="panel-desc">
+                                    3-4 words about the subject
+                                </p>
+                            </div>
+
+                            <!-- panels -->
+                            <div class="panel" style="background: #FF7F11; color: #000;">
+                                <h4 class="panel-title">Subject</h4>
+                                <p class="panel-desc">
+                                    3-4 words about the subject
+                                </p>
+                            </div>
+
+                            <!-- panels -->
+                            <div class="panel" style="background: #FDCFF3; color: #000;">
+                                <h4 class="panel-title">Subject</h4>
+                                <p class="panel-desc">
+                                    3-4 words about the subject
+                                </p>
+                            </div>
+
+                            <!-- panels -->
+                            <div class="panel" style="background: #FBB13C; color: #000;">
+                                <h4 class="panel-title">Subject</h4>
+                                <p class="panel-desc">
+                                    3-4 words about the subject
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
 
                 <!-- tabs -->
                 <div id="tabs">
@@ -52,17 +112,8 @@
                     </span>
                 </div>
 
-                <!-- horizontal scrollable area -->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12 horizontalscroll" >
-                            
-                        </div>
-                    </div>
-                </div>
-                
                 <!-- discussion cards -->
-                <div class="scrollableContainer">
+                <div class="scrollableContainer mt-20">
                     <!-- discuss card -->
                     <div class="container-fluid">
                         <div class="row">
@@ -80,7 +131,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
+                                        <h2>Here comes the Question Title....</h2>
                                         <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
                                     </div>
                                     <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
@@ -91,8 +142,9 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- discuss card -->
-                    <div class="container-fluid mt-20">
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12 no-pad">
                                 <div class="card mb-4">
@@ -108,7 +160,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
+                                        <h2>Here comes the Question Title....</h2>
                                         <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
                                     </div>
                                     <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
@@ -119,8 +171,9 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- discuss card -->
-                    <div class="container-fluid mt-20">
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12 no-pad">
                                 <div class="card mb-4">
@@ -136,7 +189,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
+                                        <h2>Here comes the Question Title....</h2>
                                         <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
                                     </div>
                                     <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
@@ -147,8 +200,9 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- discuss card -->
-                    <div class="container-fluid mt-20">
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12 no-pad">
                                 <div class="card mb-4">
@@ -164,7 +218,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
+                                        <h2>Here comes the Question Title....</h2>
                                         <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
                                     </div>
                                     <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
@@ -175,8 +229,9 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- discuss card -->
-                    <div class="container-fluid mt-20">
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12 no-pad">
                                 <div class="card mb-4">
@@ -192,7 +247,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
+                                        <h2>Here comes the Question Title....</h2>
                                         <p> For me, getting my business website made was a lot of tech wizardry things. Thankfully i get an ad on Facebook ragarding commence website. I get connected with BBB team. They made my stunning website live in just 3 days. With the increase demand of online customers. I had to take my business online. BBB Team guided me at each step and enabled me to centralise my work and have control on all aspect of my online business. </p>
                                     </div>
                                     <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
@@ -203,25 +258,25 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
-                
+
 
             </div>
         </div>
-        <div id="qnasidebar" class="col-xs-12 col-lg-3 mt-50 ">
-            
+
+        <!-- sidebar -->
+        <div id="qnasidebar" class="col-xs-12 col-lg-3 mt-20 ">
+
+            <div class="search">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for categories and more..">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
             <!-- checkboxes -->
-            <div class="card ">
-                <article class="card-group-item">
-                    <div class="filter-content">
-                        <div class="form-row">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter Keywords" aria-label="Enter Keywords" aria-describedby="button-addon2">
-                                <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
-                            </div>
-                        </div>
-                    </div>
-                </article> 
+            <div class="card mt-20">
                 <!-- card-group-item.// -->
                 <article class="card-group-item checks">
                     <header class="card-header">
@@ -234,19 +289,19 @@
                                   <input type="checkbox" class="custom-control-input" id="Check1">
                                   <label class="custom-control-label" for="Check1">C++</label>
                             </div> <!-- form-check.// -->
-            
+
                             <div class="custom-control custom-checkbox">
                                 <span class="float-right badge badge-light round">132</span>
                                   <input type="checkbox" class="custom-control-input" id="Check2">
                                  <label class="custom-control-label" for="Check2">Java</label>
                             </div> <!-- form-check.// -->
-            
+
                             <div class="custom-control custom-checkbox">
                                 <span class="float-right badge badge-light round">17</span>
                                   <input type="checkbox" class="custom-control-input" id="Check3">
                                   <label class="custom-control-label" for="Check3">Python</label>
                             </div> <!-- form-check.// -->
-            
+
                             <div class="custom-control custom-checkbox">
                                 <span class="float-right badge badge-light round">7</span>
                                   <input type="checkbox" class="custom-control-input" id="Check4">
@@ -255,11 +310,11 @@
                         </div> <!-- card-body.// -->
                     </div>
                 </article> <!-- card-group-item.// -->
-            </div> 
+            </div>
             <!-- card.// -->
 
             <!-- // categories -->
-            <div class="card mt-50 categories">
+            <div class="card mt-20 categories">
                 <article class="card-group-item">
                     <header class="card-header"><h6 class="title">Similar Categories </h6></header>
                     <div class="filter-content">
@@ -290,15 +345,127 @@
                         </div> <!-- card-body.// -->
                     </div>
                 </article> <!-- card-group-item.// -->
-            </div> 
+            </div>
             <!-- categories.// -->
 
         </div>
+
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="undefined" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- floating buttons -->
+    <div id="floatingbtns">
+        <button id="sortbtn" data-toggle="modal" data-target="#sortModal">
+            <i class="fa fa-sort"></i>
+        </button>
+
+        <button id="filterbtn" data-toggle="modal" data-target="#filtertModal">
+            <i class="fa fa-filter"></i>
+        </button>
+    </div>
+  
+    <!-- Sort Modal -->
+    <div class="modal" id="sortModal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+    
+            <!-- Modal Header -->
+            <div class="modal-header">
+            <h4 class="modal-title">Sorting Options</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+    
+            <!-- Modal body -->
+            <div class="modal-body">
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-icon"><i class="fa fa-sort-alpha-asc"></i></span>
+                    <span class="btn-label">Alphabetically</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-icon"><i class="fa fa-thumbs-up"></i></span>
+                    <span class="btn-label">Highest Upvotes</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-icon"><i class="fa fa-thumbs-down"></i></span>
+                    <span class="btn-label">Lowest Upvotes</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-icon"><i class="fa fa-sort-amount-asc"></i></span>
+                    <span class="btn-label">Latest First</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-icon"><i class="fa fa-sort-amount-desc"></i></span>
+                    <span class="btn-label">Oldest First</span>
+                </button>
+            </div>
+    
+        </div>
+        </div>
+    </div>
+
+    <!-- Filter Modal -->
+    <div class="modal" id="filtertModal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+    
+            <!-- Modal Header -->
+            <div class="modal-header">
+            <h4 class="modal-title">Filter Categories</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+    
+            <!-- Modal body -->
+            <div class="modal-body">
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-label">Programming Languages</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-label">Operating Systems</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-label">DBMS</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-label">Web Development</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-label">Competitive Programming</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-label">Dynamic Programming</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-label">Interview Preparation</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-label">Java</span>
+                </button>
+                <!-- sorting options -->
+                <button class="sortbutton">
+                    <span class="btn-label">Python</span>
+                </button>
+            </div>
+    
+        </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
     <script>
