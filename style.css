@@ -150,8 +150,7 @@ a {
 
 #tabs{
     margin: 20px 0px;
-    margin-left: 2%;
-    width: 96%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -184,7 +183,9 @@ a {
     font-weight: 700;
     box-shadow: 1px 1px 5px #aaa;
 }
-
+.no-pad{
+    padding: 0;
+}
 
 @media screen and (max-width: 990px){
     .checks{
