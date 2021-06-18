@@ -344,6 +344,8 @@ a {
         margin-bottom: 5px;
     }
     #floatingbtns{
+        visibility: visible;
+        display: block;
         position: fixed;
         right: 40px;
         bottom: 50px;
