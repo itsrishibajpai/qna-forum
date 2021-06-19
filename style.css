@@ -21,10 +21,15 @@ body {
 }
 
 #qnasidebar{
-    max-height: 720px;
+    max-height: 800px;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+.badge-pill:hover{
+    background: #111;
+    color: rgb(255, 203, 106);
+    transition: 0.4s ease;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -140,6 +145,18 @@ body {
     font-size: 13px
 }
 
+.category{
+    width: max-content;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    background: #e2e2e2;
+    color: #111;
+}
+.category a{
+    color: #000;
+}
+
 a {
     color: rgb(228, 148, 0);
     text-decoration: none !important;
@@ -149,12 +166,6 @@ a {
 .media img {
     width: 40px;
     height: auto;
-}
-
-@media screen and (max-width: 990px){
-    #qna-wrapper{
-        flex-direction: column-reverse;
-    }
 }
 
 .activetab{
@@ -202,14 +213,6 @@ a {
     padding: 0;
 }
 
-
-@media screen and (max-width: 425px) {
-    #tabs .tab{
-        font-size: 0.8em;
-    }
-}
-
-
 .search
 {
 	border: 2px solid rgb(255, 203, 106);
@@ -254,21 +257,6 @@ a {
     transition: 0.5s ease;
 }
 
-/* ===========================
-   ====== Medua Query for Search Box ======
-   =========================== */
-
-@media only screen and (min-width : 150px) and (max-width : 780px)
-{
-
-	.search
-	{
-		width: 100%;
-		margin: 0 auto;
-	}
-
-}
-
 .horizontalscroll{
     display: flex;
     align-items: flex-start;
@@ -300,6 +288,58 @@ a {
     visibility: hidden;
 }
 
+/* ==== color styles ==== */
+.color1{
+    background: #E6B89C; 
+    color: #000;
+}
+.color2{
+    background: #AA7DCE; 
+    color: #000;
+}
+.color3{
+    background: #BEB7A4; 
+    color: #000;
+}
+.color4{
+    background: #34f1ff; 
+    color: #000;
+}
+.color5{
+    background: #FF7F11; 
+    color: #000;
+}
+.color6{
+    background: #75ffbf; 
+    color: #000;
+}
+
+
+.tag{
+    display: inline-block;
+    width: max-content;
+    min-width: max-content;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    line-height: 1em;
+}
+.tag:hover{
+    color: #000;
+    opacity: 0.9;
+}
+
+
+/* ==================================================
+======= responsive media queries below 900px  =======
+===================================================== */
+
+@media screen and (max-width: 990px){
+    #qna-wrapper{
+        flex-direction: column-reverse;
+    }
+}
 
 @media screen and (max-width: 990px){
     #qna-wrapper{
@@ -345,7 +385,7 @@ a {
     }
     #floatingbtns{
         visibility: visible;
-        display: block;
+        display: block  ;
         position: fixed;
         right: 40px;
         bottom: 50px;
@@ -382,7 +422,7 @@ a {
         box-shadow: 0px 0px 10px #999;
         transition: 0.5s ease;
     }    
-    .modal-content{
+    .mobilemodal{
         width: 300px;
         padding: 0px 20px;
         margin: 50px auto;
@@ -426,11 +466,18 @@ a {
     }
 }
 
+
+@media screen and (max-width: 425px) {
+    #tabs .tab{
+        font-size: 0.8em;
+    }
+}
+
 @media screen and (max-width: 325px){
     #qna-wrapper{
         padding: 20px 10px;
     }
-    .modal-content{
+    .mobilemodal{
         width: 250px;
         padding: 0px 15px;
     }
@@ -451,3 +498,18 @@ a {
         background: #fff;
     }
 }
+
+/* ===========================
+   ====== Medua Query for Search Box ======
+   =========================== */
+
+   @media only screen and (min-width : 150px) and (max-width : 780px)
+   {
+   
+       .search
+       {
+           width: 100%;
+           margin: 0 auto;
+       }
+   
+   }
